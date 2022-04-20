@@ -2,7 +2,6 @@ package tests;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
 import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
 import static listeners.CustomAllureListener.withCustomTemplates;
@@ -52,7 +51,7 @@ public class reqresApiTests {
                     .put("https://reqres.in/api/users/2")
                     .then()
                     .statusCode(200)
-                    .body("name", is("morpheus"))
+                    .body("name", is("Bob"))
                     .body("job", is("Web-Developer"));
         }
 
